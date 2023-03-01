@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import ListItems from "./ListItems";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleFilter = (searchTerm) => {
+    setSearchTerm(searchTerm);
+  };
+
+  const items = ["smartphone", "tech news", "alpha a", "alpha b", "smartcity"];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ListItems items={items} onFilter={handleFilter} />
+      <p>Search term: {searchTerm}</p>
     </div>
   );
 }

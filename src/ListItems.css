@@ -1,0 +1,34 @@
+.top {
+  height: 100px;
+  width: auto;
+  background-color: #7d26cd;
+}
+
+.search-box {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.article-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  padding-right: 40px;
+}
+
+.article-item {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.article-item:hover {
+  background-color: #e6e6e6;
+}
